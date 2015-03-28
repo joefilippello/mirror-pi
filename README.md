@@ -179,7 +179,7 @@ The HC-SR501 sensor is connected to the Raspberry Pi GPIO pins as shown below.
 To get Mirror π simply run the following command in the command-line:
 
 ```
-git clone https://github.com/szantaii/mirror-pi.git
+git clone https://github.com/joefilippello/mirror-pi.git
 ```
 
 _Note that the following instructions use the `pi` user's home directory (`/home/pi`) as the base directory for Mirror π. If you choose to clone Mirror π to a different location make sure you enter the proper paths when using the following commands in the next sections. Also the [startup/mirror-pi.desktop](startup/mirror-pi.desktop) file contains Mirror π's absolute path, so if you cloned Mirror π into another location than the `pi` user's home directory you must edit this file also so it would contain the proper path._
@@ -192,7 +192,7 @@ In this section we will go through the boot process setup of Mirror π.
 
 By applying the following settings boot logs and splash screens will be hidden.
 
-Remove the following option from the exisitng kernel options:
+Remove the following option from the existing kernel options:
 
 * `console=tty1` By removing this option the output will not be written to `tty1`.
 
@@ -263,7 +263,7 @@ Enable the Mirror π by adding the `bootsplash` service to the system in four st
 `TODO` detailed description
 
 ```
-sudo sed -i.bak 's/^/#/' /etc/xdg/lxsession/LXDE/autostart
+sudo sed -i.bak 's/^/#/' /etc/xdg/lxsession/LXDE-pi/autostart
 ```
 
 ```
@@ -277,4 +277,9 @@ sudo sed -i.bak 's/^#xserver-command=X$/xserver-command=X -s 0 -dpms -nocursor/'
 
 ## Mirror π setup
 
-`TODO`
+Some basic housecleaning items need to take place to make sure the setup is personalized to your locale.
+
+1.  Edit /home/pi/mirror-pi/webapp/js/settings.js to change City, Country, and UnitType (imperial or metric)
+2.
+
+`TODO` more details
