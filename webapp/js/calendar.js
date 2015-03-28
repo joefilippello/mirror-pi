@@ -4,6 +4,7 @@ var calendar = {
 	monthsOfYear: settings.calendar.monthsOfYear,
 	firstDayOfWeek: settings.calendar.firstDayOfWeek,
 	daysOfWeek: settings.common.daysOfWeek,
+    unitType: settings.weather.unitType,
 	
 	getNumberOfDays: function() {
 		
@@ -19,17 +20,38 @@ var calendar = {
 	},
 	
 	printTime: function(target) {
-		
+
+        var hours = this.date.getHours();
 		var minutes = this.date.getMinutes();
-		
-		if (minutes < 10)
-		{
+
+        if (this.unitType == "imperial") {
+
+            if (hours > 12) {
+                hours -= 12;
+            }
+            else if (hours === 0) {
+                hours = 12;
+            }
+
+
+            if (minutes < 10) {
+                minutes = "0" + minutes;
+            }
+
+            $(target).html(hours + ":" + minutes);
+
+        }
+
+        else if (this.unitType == "metric"){
+
+            if (minutes < 10){
 			minutes = "0" + minutes;
-		}
-		
+		    }
+
 		$(target).html(this.date.getHours() + ":" + minutes);
+        }
 	},
-	
+
 	printMonth: function(target) {
 		
 		var targetContent = "";

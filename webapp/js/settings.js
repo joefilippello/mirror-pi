@@ -8,15 +8,15 @@ var settings = {
 			"July", "August", "September", "October", "November", "December"]
 	},
 	weather: {
-		city: "Budapest",
-		countryCode: "HU",
-		unitType: "metric", // "metric" or "imperial"
+		city: "Indianapolis",
+		countryCode: "US",
+		unitType: "imperial", // "metric" or "imperial"
 		forecastDays: 5, // max 5
 		refreshInterval: 5 // measured in minutes
 	},
 	feed: {
-		url: "http://www.nasa.gov/rss/dyn/breaking_news.rss",
-		title: "NASA",
+		url: "http://rssfeeds.indystar.com/indystar/todaystopstories",
+		title: "IndyStar",
 		entryCount: 30,
 		timeout: 10
 	}
