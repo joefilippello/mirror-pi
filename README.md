@@ -279,7 +279,9 @@ sudo sed -i.bak 's/^#xserver-command=X$/xserver-command=X -s 0 -dpms -nocursor/'
 
 Some basic housecleaning items need to take place to make sure the setup is personalized to your locale.
 
-1.  Edit /home/pi/mirror-pi/webapp/js/settings.js to change City, Country, and UnitType (imperial or metric)
-2.
+1.  Edit /home/pi/mirror-pi/webapp/js/settings.js to change city, countryCode, and UnitType (imperial or metric) in the
+    weather section.
+2.  Edit /home/pi/mirror-pi/webapp/js/settings.js to change url, title, and possibly entry count of the feed section
+    to change to a different RSS feed.
 
 `TODO` more details
