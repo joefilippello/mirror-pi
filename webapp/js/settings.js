@@ -16,7 +16,7 @@ var settings = {
 	},
 	feed: {
 		url: "http://rssfeeds.indystar.com/indystar/todaystopstories",
-		title: "IndyStar",
+		title: "",
 		entryCount: 30,
 		timeout: 10
 	}
