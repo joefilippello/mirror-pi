@@ -3,7 +3,7 @@ var settings = {
 		daysOfWeek: ["sun", "mon", "tue", "wed", "thu", "fri", "sat", "sun"]
 	},
 	calendar: {
-		firstDayOfWeek: 1, // Sunday = 0, Monday = 1
+		firstDayOfWeek: 0, // Sunday = 0, Monday = 1
 		monthsOfYear: ["January", "February", "March", "April", "May", "June",
 			"July", "August", "September", "October", "November", "December"]
 	},
